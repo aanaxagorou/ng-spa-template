@@ -1,0 +1,17 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+.angular
+.eslintrc.json
+.vscode/*
+package-lock.json
+
+/**/*.scss
+/**/*.md
+/**/*.js
+
+/apps/mobile/fastlane/*
+/tools/*
+
+/.nx/cache
