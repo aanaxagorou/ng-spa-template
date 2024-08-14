@@ -27,7 +27,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets/i18n"
             ],
             "styles": ["src/styles.scss"],
             "scripts": [],
@@ -51,11 +52,14 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "aot": true,
+              "optimization": true,
+              "namedChunks": true
             },
             "development": {
-              "optimization": false,
-              "extractLicenses": false,
+              "aot": true,
+              "namedChunks": true,
+              "optimization": true,
               "sourceMap": true
             }
           },
