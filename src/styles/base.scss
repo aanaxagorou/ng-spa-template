@@ -1,0 +1,46 @@
+@layer base {
+  // html body common styles
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 100%;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    @apply lato-regular text-base bg-zinc-100 font-normal #{!important};
+
+    &.dark {
+      @apply bg-darkGray text-white #{!important};
+    }
+
+  }
+
+  // scroll bar all application
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lightSlate) rgba(var(--lightSlate), 0.3);
+  }
+
+  @media only screen and (max-device-width: theme('screens.sm')) {
+    ::-webkit-scrollbar {
+      @apply h-0 #{!important};
+    }
+  }
+
+  /* styling scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-1 h-2;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply my-2 md:my-1 bg-slate-500/5 dark:bg-gray-500/5;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply my-2 md:my-1 bg-slate-500/30 dark:bg-gray-500/30 rounded-xl;
+  }
+}
